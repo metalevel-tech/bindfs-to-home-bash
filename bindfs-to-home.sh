@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # @author       Spas Z. Spasov <spas.z.spasov@gmail.com>
-# @copyright    2022 Spas Z. Spasov
+# @license      https://www.gnu.org/licenses/gpl-3.0.html GNU General Public License, version 3
 # @home         https://github.com/metalevel-tech/bindfs-to-home-bash
-# @license      https://www.gnu.org/licenses/gpl-3.0.html GNU General Public License, version 3 (or later)
+#
+# @name         bindfs-to-home.sh
 
-[[ -z ${1+x} ]] && DO_ACTION="L-V-H"   || DO_ACTION="$1"   # Default action LIST MOUNTED, VERBOSE OUTPUT
+[[ -z ${1+x} ]] && DO_ACTION="L-V-H"     || DO_ACTION="$1"   # Default action LIST MOUNTED, VERBOSE OUTPUT
 [[ -z ${2+x} ]] && SOURCE_DIR="/var/www" || SOURCE_DIR="$2"  # Default target directory '/var/www'
 [[ -z ${3+x} ]] && SOURCE_USR="AUTO"     || SOURCE_USR="$3"  # Default source user is the user owned the target dir
 
