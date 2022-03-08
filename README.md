@@ -1,15 +1,19 @@
 # Bindfs to User's Home Directory Bash Script
+
 Bash script which allows easy mount of any filesystem directory into the user's home directory with proper permissions, so you can easily edit the files in that directory, without the need to make a mess with the application/service's filesystem permissions. 
 
 Initially I've designed the scrip in order to edit system files with VSC, within a local or remote sessions. Some additional explanations could be found at [this answer of mine](https://askubuntu.com/a/1024308/566421) at [AskUbuntu.com](https://askubuntu.com/users/566421).
 
 ## Installation
+
 Place the script [**`bindfs-to-home.sh`**](bindfs-to-home.sh) into `~/bin` or `/usr/local/bin` or elsewhere within your `$PATH` and use it as shell command. You can use the [`install.sh`](install.sh) script - it accept one parameter with default value `$HOME/bin`.
+
 ```bash
 ./install.sh
 ```
 
 ## Usage
+
 The script uses the tool `bindfs` (it must be installed) and you must have *root* privileges. The target (source) directories will be mounted under a directory called `~/bindfs`.
 
 For example, in order to ***m***ount `/var/www/html` use the following syntax:
@@ -17,12 +21,16 @@ For example, in order to ***m***ount `/var/www/html` use the following syntax:
 ```bash
 $ bindfs-to-home.sh m /var/www/html
 ```
+
 Now you can see there is a new directory tree under `~/bindfs` owned by the current *user*.
+
 ```bash
 $ ls -ld ~/bindfs/var/www/html/
 drwxr-xr-x 2 user user 4096 Oct 22 10:31 /home/pa4080/bindfs/var/www/html/
 ```
+
 In contrast the target (source) directory (in the current case) is owned by *root*.
+
 ```bash
 $ ls -ld /var/www/html
 drwxr-xr-x 2 root root 4096 Oct 22 10:31 /var/www/html
@@ -55,16 +63,22 @@ The script accepts three positional parameters:
 
 * The **third parameter** is the owner of the files that will be created within the source directory. By default the script will find who is the owner of that directory and will use it, so you do not need to use this parameter in the most cases.
 
-*The (destination) directory `~/bindfs` is hardcoded. And will be automatically created in case it doesn't exist. Probably in the further versions of the script it will become a parameter - also the destination use could be a parameter...*
+* The (destination) directory `~/bindfs` is hardcoded. And will be automatically created in case it doesn't exist. Probably in the further versions of the script it will become a parameter - also the destination use could be a parameter...*
 
 The options could be entered with uppercase or lowercase. They should be written without leading dash. Also you can use words instead of letters, for example `mount` instead `m` or `all` instead of `a`, just the the first letter make sense. The available options are:
 
 * `m` mount the directory provided by the second positional parameter or `/var/www` if it is not * `u` unmount the directory provided by the second positional parameter or `/var/www` if it is not provided.
-.
+
 * `m-v` mount the directory and print the variables in use.
+
 * `u` unmount the directory provided by the second positional parameter or `/var/www` if it is not provided.
+
 * `a` unmount all mounted directories.
+
 * `l` list all mounted directories.
+
 * `-v` print the variables in use. It could be combined with any other option or used alone, but in this case the leading dash is mandatory.
+
 * `-h` print help message. It could be combined with any other option or used alone, but in this case the leading dash is mandatory.
+
 * **`l-v-h`** is the default options combination.
