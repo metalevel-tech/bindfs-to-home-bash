@@ -1,4 +1,4 @@
-# Bindfs to User's Home Directory Bash Script
+# Bindfs to the User's Home Directory Bash Script
 
 Bash script which allows easy mount of any filesystem directory into the user's home directory with proper permissions, so you can easily edit the files in that directory, without the need to make a mess with the application/service's filesystem permissions. 
 
