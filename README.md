@@ -1,4 +1,4 @@
-# bindfs-to-home-bash
+# Bindfs to User's Home Directory Bash Script
 Bash script which allows easy mount of any filesystem directory into the user's home directory with proper permissions, so you can easily edit the files in that directory, without the need to make a mess with the application/service's filesystem permissions. 
 
 Initially I've designed the scrip in order to edit system files with VSC, within a local or remote sessions. Some additional explanations could be found at [this answer of mine](https://askubuntu.com/a/1024308/566421) at [AskUbuntu.com](https://askubuntu.com/users/566421).
