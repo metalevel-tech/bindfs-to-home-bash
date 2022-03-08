@@ -59,19 +59,21 @@ The script accepts three positional parameters:
 
 * The **first parameter** behaves as option(s). They must be written in little bit strange way and this is because I decided to keep is simple as possible. 
 
-* The **second parameter** is the target (source) directory that should be mounted. The default value is `/var/www`
+* The **second parameter** is the target (source) directory that should be mounted. The default value is `/var/www`.
 
 * The **third parameter** is the owner of the files that will be created within the source directory. By default the script will find who is the owner of that directory and will use it, so you do not need to use this parameter in the most cases.
 
-* The (destination) directory `~/bindfs` is hardcoded. And will be automatically created in case it doesn't exist. Probably in the further versions of the script it will become a parameter - also the destination use could be a parameter...*
+* The (destination) directory `~/bindfs` is hardcoded. And will be automatically created in case it doesn't exist. 
+
+    *Probably in the further versions of the script it will become a parameter - also the destination use could be a parameter...*
 
 The options could be entered with uppercase or lowercase. They should be written without leading dash. Also you can use words instead of letters, for example `mount` instead `m` or `all` instead of `a`, just the the first letter make sense. The available options are:
 
-* `m` mount the directory provided by the second positional parameter or `/var/www` if it is not * `u` unmount the directory provided by the second positional parameter or `/var/www` if it is not provided.
+* `m` mount the directory, provided by the second positional parameter or mount `/var/www` if it is not.
 
 * `m-v` mount the directory and print the variables in use.
 
-* `u` unmount the directory provided by the second positional parameter or `/var/www` if it is not provided.
+* `u` unmount the directory, provided by the second positional parameter or unmount `/var/www` if it is not provided.
 
 * `a` unmount all mounted directories.
 
