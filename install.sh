@@ -4,4 +4,4 @@
 
 FILE_TO_COPY="bindfs-to-home.sh"
 
-cp -iuv­ "${FILE_TO_COPY}" "${DIR_IN_PATH}/"
+cp -iuv "${FILE_TO_COPY}" "${DIR_IN_PATH}/"
