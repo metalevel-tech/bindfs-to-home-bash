@@ -84,3 +84,7 @@ The options could be entered with uppercase or lowercase. They should be written
 * `-h` print help message. It could be combined with any other option or used alone, but in this case the leading dash is mandatory.
 
 * **`l-v-h`** is the default options combination.
+
+## References
+
+* Answer of mine at Ask Ubuntu: [Setting up SFTP to log in to server with Filezilla and access files outside my home directory](https://askubuntu.com/a/1024308/566421)
