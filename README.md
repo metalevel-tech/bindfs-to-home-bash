@@ -87,4 +87,4 @@ The options could be entered with uppercase or lowercase. They should be written
 
 ## References
 
-* Answer of mine at Ask Ubuntu: [Setting up SFTP to log in to server with Filezilla and access files outside my home directory](https://askubuntu.com/a/1024308/566421)
+* Answer of mine (Spas Z. Spasov) on AskUbuntu: [Setting up SFTP to log in to server with Filezilla and access files outside my home directory](https://askubuntu.com/a/1024308/566421)
